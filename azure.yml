@@ -1,0 +1,11 @@
+jobs:
+- job: MeasureDevRandomSpeed
+  pool:
+    vmImage: 'ubuntu-16.04'
+  steps:
+  - bash: 'dd if=/dev/random bs=10000 > /dev/null'
+- job: MeasureDevUrandomSpeed
+  pool:
+    vmImage: 'ubuntu-16.04'
+  steps:
+  - bash: 'dd if=/dev/urandom bs=10000 > /dev/null'
